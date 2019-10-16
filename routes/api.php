@@ -13,6 +13,11 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+
+Route::match(['get', 'post'], 'user', function () {
+    return 'This is a request from get or post';
+});
+
+Route::any('bar', function () {
+    return 'This is a request from any HTTP verb';
 });

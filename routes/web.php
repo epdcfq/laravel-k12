@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+# vue测试
+Route::get('/hello','HelloController@index');
